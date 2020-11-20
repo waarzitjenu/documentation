@@ -1,0 +1,16 @@
+graph TB
+    subgraph "back-end"
+      A[waarzitjenu/database]
+      B[waarzitjenu/auth]
+    end
+
+    subgraph "middleware"
+      C[waarzitjenu/server]
+    end
+
+    subgraph "front-end"
+      D(waarzitjenu/map)
+    end
+
+C --> A & B
+D <--> C
